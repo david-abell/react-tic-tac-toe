@@ -52,3 +52,13 @@
 .move-button[disabled] {
   background-color: #adadad;
 }
+
+.game-board {
+  border: 0.25rem solid #1d3557;
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.board-row {
+  width: fit-content;
+}
