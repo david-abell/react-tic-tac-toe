@@ -60,13 +60,7 @@ function App() {
   return (
     <div className="game">
       <h1 className="game-title">Tic-Tac-Toe</h1>
-      <div className="game-board">
-        <Board
-          squares={history[moveNumber].squares}
-          onClick={handleClick}
-          // status={status}
-        />
-      </div>
+      <Board squares={history[moveNumber].squares} onClick={handleClick} />
       <div>
         <h2 className="status-title">{status}</h2>
         <ol className="game-moves">{moves}</ol>
