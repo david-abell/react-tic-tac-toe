@@ -42,7 +42,11 @@ function App() {
     const moveDescription = index ? `Go to move #${index}` : "Go to game start";
     return (
       <li key={`move${index}`}>
-        <button className="move-button" onClick={() => goToMove(index)}>
+        <button
+          className="move-button"
+          onClick={() => goToMove(index)}
+          disabled={!!winner}
+        >
           {moveDescription}
         </button>
       </li>
