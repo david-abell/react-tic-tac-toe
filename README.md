@@ -1,5 +1,7 @@
 # A Game of Tic-Tac-Toe using React.js
 
+Try it out at [https://david-abell.github.io/react-tic-tac-toe](https://david-abell.github.io/react-tic-tac-toe)
+
 ## Why I built it this way
 
 - This was a quick rewrite of the [React Tic-tac-toe tutorial](https://reactjs.org/tutorial/tutorial.html) using Functional components and useState/useEffect hooks.
