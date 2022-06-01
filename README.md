@@ -21,8 +21,10 @@ Try it out at [https://david-abell.github.io/react-tic-tac-toe](https://david-ab
 
 For deployment
 
+Update `"homepage"` in `package.json` if necessary.
+
 ```bash
-npm run build
+npm run deploy
 ```
 
 To run locally:
@@ -30,3 +32,7 @@ To run locally:
 ```bash
 npm run start
 ```
+
+## Credits
+
+Thanks to the [gh-deploy instructions](https://github.com/gitname/react-gh-pages) for incredibly easy deployment.
