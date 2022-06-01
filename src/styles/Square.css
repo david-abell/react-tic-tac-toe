@@ -1,0 +1,13 @@
+.square {
+  background-color: #f5f5ff;
+  border: 0.25rem solid #1d3557;
+  height: 10rem;
+  width: 10rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 5rem;
+  color: #1d3557;
+}
+
+.played-square {
+  font-weight: 900;
+}

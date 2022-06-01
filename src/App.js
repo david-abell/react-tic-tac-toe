@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Board from "./components/Board";
-import "./App.css";
+import "./styles/App.css";
 import { cloneDeep } from "lodash";
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
   }
 
   function goToMove(move) {
+    if (winner) return;
     setMoveNumber(move);
     setHistory(history.slice(0, move + 1));
     setXIsNext(move % 2 === 0);
@@ -41,7 +42,9 @@ function App() {
     const moveDescription = index ? `Go to move #${index}` : "Go to game start";
     return (
       <li key={`move${index}`}>
-        <button onClick={() => goToMove(index)}>{moveDescription}</button>
+        <button className="move-button" onClick={() => goToMove(index)}>
+          {moveDescription}
+        </button>
       </li>
     );
   });
@@ -52,16 +55,17 @@ function App() {
 
   return (
     <div className="game">
+      <h1 className="game-title">Tic-Tac-Toe</h1>
       <div className="game-board">
         <Board
           squares={history[moveNumber].squares}
           onClick={handleClick}
-          status={status}
+          // status={status}
         />
       </div>
-      <div className="game-info">
-        <div>{status}</div>
-        <ol>{moves}</ol>
+      <div>
+        <h2 className="status-title">{status}</h2>
+        <ol className="game-moves">{moves}</ol>
       </div>
     </div>
   );
